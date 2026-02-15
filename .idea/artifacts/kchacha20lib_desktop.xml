@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="kchacha20lib-desktop">
+    <output-path>$PROJECT_DIR$/kchacha20lib/build/libs</output-path>
+    <root id="archive" name="kchacha20lib-desktop.jar">
+      <element id="module-output" name="kchacha20.kchacha20lib.desktopMain" />
+    </root>
+  </artifact>
+</component>
