@@ -6,3 +6,5 @@ build
 core/target
 .kotlin
 .idea
+.DS_Store
+local.properties
