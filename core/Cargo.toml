@@ -1,0 +1,17 @@
+[package]
+name = "rkv"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chacha20poly1305 = "0.10"
+argon2 = "0.5"
+rand = "0.8"
+uniffi = "0.28"
+uniffi_bindgen = "0.31.0"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+path = "src/libs.rs"
