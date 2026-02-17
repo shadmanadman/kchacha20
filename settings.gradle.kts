@@ -6,7 +6,7 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
-rootProject.name = "kargon2"
+rootProject.name = "kchacha20"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -35,5 +35,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-include(":klib")
+include(":kchacha20lib")
 
