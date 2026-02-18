@@ -10,11 +10,12 @@ compose-multiplatform = "1.7.3"
 core = "1.6.1"
 startup = "1.2.0"
 kotlin = "2.2.0"
+gobley = "0.3.7"
 accompanist-permissions = "0.32.0"
 vanniktech-publish = "0.34.0"
 groupId = "io.github.shadmanadman"
-artifactId = "KSensor"
-snapshotVersion = "2.0.17-SNAPSHOT"
+artifactId = "kchacha20"
+snapshotVersion = "0.0.53-SNAPSHOT"
 [libraries]
 androidx-core = { module = "androidx.test:core", version.ref = "core" }
 androidx-rules = { module = "androidx.test:rules", version.ref = "core" }
@@ -34,3 +35,6 @@ composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-mu
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 vanniktechPublish = {id = "com.vanniktech.maven.publish", version.ref = "vanniktech-publish"}
+gobleyCargo ={id = "dev.gobley.cargo", version.ref= "gobley"}
+devGobleyUniffi ={id = "dev.gobley.uniffi", version.ref= "gobley"}
+atomicfu = {id = "plugin.atomicfu", version.ref = "kotlin"}

@@ -2,21 +2,23 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.vanniktechPublish)
-    id("dev.gobley.cargo") version "0.3.7"
-    id("dev.gobley.uniffi") version "0.3.7"
+    alias(libs.plugins.gobleyCargo)
+    alias(libs.plugins.devGobleyUniffi)
     kotlin("plugin.atomicfu") version libs.versions.kotlin
     id("signing")
 }
 
 kotlin {
+
     cargo {
         packageDirectory = layout.projectDirectory.dir("../core")
     }
+
     androidTarget {
         publishLibraryVariants("release")
     }
 
-    jvm("desktop")
+    //jvm("desktop")
 
     listOf(
         iosX64(),

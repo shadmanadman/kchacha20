@@ -1,4 +1,4 @@
-import uniffi.rkv.SecretCipher
+import uniffi.chacha20.SecretCipher
 
 typealias EncryptedData = ByteArray
 
