@@ -2,16 +2,8 @@ use chacha20poly1305::{
     AeadCore, ChaCha20Poly1305, Nonce, aead::{Aead, KeyInit, OsRng}
 };
 use argon2::{Argon2, password_hash::{SaltString}};
-use serde::{Serialize, Deserialize};
 
 uniffi::setup_scaffolding!();
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct SecretEntry {
-    pub service: String,
-    pub username: String,
-    pub password: Vec<u8>,
-}
 
 #[derive(uniffi::Object)]
 pub struct SecretCipher {
