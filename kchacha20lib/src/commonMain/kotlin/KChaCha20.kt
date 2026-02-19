@@ -6,7 +6,7 @@ object KChaCha20 {
     private var secretCipher: SecretCipher? = null
 
     fun create(masterPassword: String, salt: String) {
-        secretCipher?.destroy()
+        destroy()
 
         secretCipher = SecretCipher(masterPassword, salt)
     }
@@ -17,5 +17,10 @@ object KChaCha20 {
 
     fun decrypt(encryptedData: EncryptedData): String {
         return secretCipher?.decrypt(encryptedData)?: error("KChaCha20 not initialized")
+    }
+
+    fun destroy(){
+        secretCipher?.destroy()
+        secretCipher = null
     }
 }
