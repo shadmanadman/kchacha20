@@ -22,7 +22,7 @@ Call create on `KChaCha20`. give it a masterPassword and your salt. this will be
  * AutoCloseable defines a single `close()` method and enables structured
  * resource management similar to try-with-resources in java.
  * Checkout here:
-https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-auto-closeable.html
+ * https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-auto-closeable.html
  **/
 KChaCha20.use{
  it.create(masterPassword,salt)
