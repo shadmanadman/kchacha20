@@ -18,10 +18,9 @@ Call create on `KChaCha20`. give it a masterPassword and your salt. this will be
 ```kotlin
 /** 
  * each time you call create the previous instance will be destroyed.
- *`use {}` ensures deterministic cleanup by automatically calling `close()`
- * at the end of the block.
+ *`use {}` ensures cleanup by automatically calling `close()` at the end of the block.
  * AutoCloseable defines a single `close()` method and enables structured
- * resource management similar to try-with-resources in Java.
+ * resource management similar to try-with-resources in java.
  * Checkout here:
 https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-auto-closeable.html
  **/
