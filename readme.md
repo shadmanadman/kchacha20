@@ -1,7 +1,11 @@
 This repository is part of the example accompanying the following article:
 
-Rust + KMP: System Performance Meets Multiplatform Delivery
-https://medium.com/@adman.shadman/rust-kmp-system-performance-meets-multiplatform-delivery-b403c2a4f6fc
+[Rust + KMP: System Performance Meets Multiplatform Delivery](https://medium.com/@adman.shadman/rust-kmp-system-performance-meets-multiplatform-delivery-b403c2a4f6fc)
+
+
+This library provides a Kotlin Multiplatform wrapper around a rust authenticated encryption implementation built on [chacha20poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/).
+The cryptographic operations (key derivation and AEAD encryption/decryption) are executed in native Rust for performance and memory safety,
+while Kotlin exposes a structured, AutoCloseable API to ensure effective cleanup of native resources.
 
 ## Use this lib:
 Add it to your dependencies:
