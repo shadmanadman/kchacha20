@@ -8,7 +8,7 @@ gobley = "0.3.7"
 vanniktech-publish = "0.34.0"
 groupId = "io.github.shadmanadman"
 artifactId = "kchacha20"
-snapshotVersion = "0.0.55-SNAPSHOT"
+snapshotVersion = "0.0.59-SNAPSHOT"
 [libraries]
 
 
