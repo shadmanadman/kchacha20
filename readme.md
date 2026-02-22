@@ -11,7 +11,7 @@ while Kotlin exposes a structured, AutoCloseable API to ensure effective cleanup
 Add it to your dependencies:
 
 ``` 
-io.github.shadmanadman:kchacha20lib:0.5.8
+io.github.shadmanadman:kchacha20lib:0.20.5
 ```
 
 Call create on `KChaCha20`. give it a masterPassword and your salt. this will be used as your cipher password:
