@@ -19,6 +19,35 @@ jobs:
           distribution: 'temurin'
           java-version: 17
 
+      - name: Install Rust Toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-unknown-linux-gnu, aarch64-unknown-linux-gnu
+
+      - name: Install Zig
+        uses: goto-bus-stop/setup-zig@v2
+        with:
+          version: 0.11.0 # Match the version you use locally
+
+      - name: Setup Cargo Linkers
+        run: |
+                  # Create a directory for our shim scripts
+                  mkdir -p .cargo-scripts
+                  
+                  # Create the x86_64 linker script
+                  cat <<EOF > .cargo-scripts/x86_64-linker.sh
+                  #!/bin/bash
+                  zig cc -target x86_64-linux-gnu "\$@"
+                  EOF
+                  
+                  # Create the aarch64 linker script
+                  cat <<EOF > .cargo-scripts/aarch64-linker.sh
+                  #!/bin/bash
+                  zig cc -target aarch64-linux-gnu "\$@"
+                  EOF
+                  
+                  chmod +x .cargo-scripts/*.sh
+
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
 
