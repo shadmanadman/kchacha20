@@ -51,7 +51,7 @@ it.decrypt(encryptedData: ByteArray):String
 
 
 ```
-Copyright (c) 2025 KSensor
+Copyright (c) 2025 kchacha20
 
 Permission to use, copy, modify, and/or distribute this software for any purpose
 with or without fee is hereby granted.
